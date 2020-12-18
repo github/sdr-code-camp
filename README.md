@@ -38,8 +38,8 @@ Great! Now you have access to your Terminal’s prompt. At this point you can ru
 
 | Command | Description|
 |---------|-------------|
-| cd | Home directory |
-| cd [folder] | Change directory |
+| cd | list current directory |
+| cd / [folder] | Change to folder directory |
 | cd ~ | Home directory, e.g. 'cd ~/folder/' |
 | cd / | Root of drive |
 | ls | Short listing |
@@ -91,11 +91,11 @@ Type in `cd ~/Desktop`. This will take you to the Desktop of your computer. If y
 
 Now that we’re there, let’s go ahead and clone the repository we forked locally to our computer. Go to the repository you forked in GitHub and click on the “Clone or Download” button to grab the clone link. _Note_: be sure that you click on “Use HTTPS”.
 
-![](images/clone.png)
+![clone](images/clone.png)
 
 Next, you’ll need to run the `git clone` command and paste the link as such:
 
-![](images/cloneterminal.png)
+![cloneterminal](images/cloneterminal.png)
 
 You should now have a folder titled `sdr-code-camp` on your Desktop. You could find it on your Desktop via your GUI but since we’re already in the CLI…try running `ls`. Depending on what’s in `~/Desktop` you may see several different things or you may just have the `sdr-code-camp` folder. If you have a lot of stuff on your Desktop (we’ve all been there) try running `ls | grep sdr`. Now you should be able to see that the `sdr-code-camp` folder does in fact live on your Desktop. For the curious: run `man grep` and ask me what `|` does.
 
@@ -105,7 +105,7 @@ Now that our code is in place (on our desktops) we can begin to interact with it
 
 Make sure that you're in the root directory for `sdr-code-camp` and run `atom .`. You should see:
 
-![](images/atom.png)
+![atom](images/atom.png)
 
 Use the menu on the left hand side to navigate around different files. The first file we're working with is the `index.html` file inside of the `site1` folder. Click on that file and you'll notice one of the first benefits of using an IDE: syntax highlighting. Atom is smart enough to recognize the language that you're programming in and highlights its syntax to make reading and checking for syntax errors a little bit easier. 
 
@@ -115,7 +115,7 @@ _Why `index.html`?_: this is just a convention—historically the root website t
 
 You can really experiment with that you build for your website. Inside of the codebase, you'll find a template for adding information about 3 of your top targets, as well as some areas where you can add your strategy for how you will approach those top targets. Here's what it looks like at first:
 
-![](images/website1.png)
+![website1](images/website1.png)
 
 While the template already has a structure in place, feel free to add or subtract more detail by adding or subtracting more HTML elements. Here's a cheat sheet of other elements you can add, but remember, Google is also your friend. 
 
@@ -312,11 +312,11 @@ Next, we'll need to add the token to our repository settings page (in Travis): h
 https://docs.travis-ci.com/user/deployment/pages/
 
 Finally, (since we haven't saved any of our work so far), run the following commands:
-
-`git add .`
-`git commit -m 'Initial Commit'`
-`git push origin master`
-
+```
+ git add .
+ git commit -m "Initial Commit"
+ git push origin master
+```
 This should trigger a build in Travis and deploy it to your GitHub Page!
 
 ### Extra for Experts
